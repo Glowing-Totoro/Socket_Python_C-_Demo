@@ -3,11 +3,9 @@ import time
 import threading
 import socket
 
-# 接收到的图片
+# 接收\处理\发送的图片
 receive_photo = []
-# 处理过的图片
 process_photo = []
-# 已发送的图片
 send_photo = []
 # 传输完成标志
 Trans_Finished = False
@@ -17,7 +15,7 @@ Process_Finished = False
 lock = threading.Lock()
 
 # 主线程：循环扫描receive_photo和process_photo,只要有未处理图片即进行处理，记得延时0.1s，防止一直阻塞（一般不会）
-# 副线程：通信，循环等待接受num，只要有就传递进入receive和process
+# 副线程：通信，循环等待接受num，只要有就传递进入receive
 
 def ReceiveServer():
     global receive_photo
