@@ -1,4 +1,4 @@
-# Socket_Python_C-_Demo
+# Socket_Python_C++_Demo
 
 >A simple demo for socket communication between c++ and python ,tested with Ubuntu 20.04.
 
