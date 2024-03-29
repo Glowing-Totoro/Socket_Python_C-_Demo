@@ -111,8 +111,23 @@ void task2(int my_server)
 int main(int argc, char** argv)
 {
     int my_server1 = get_client_connnect(5001);
+    if (my_server1)
+        std::cout << "port1 connected!" << std::endl;
+    else
+    {
+        std::cout << "port1 failed" << std::endl;
+        while(1);
+    }
+    // 等其他端口连接，这里条件可自定义
+    usleep(1000000);
     int my_server2 = get_client_connnect(5002);
-    
+    if (my_server2)
+        std::cout << "port2 connected!" << std::endl;
+    else
+    {
+        std::cout << "port2 failed" << std::endl;
+        while(1);
+    }
     KFsDepthAll.resize(120);
     KFsDepthTrans.resize(120);
     KFsDepthRece.resize(120);
