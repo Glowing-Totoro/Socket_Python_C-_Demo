@@ -1,6 +1,6 @@
 # Socket_Python_C++_Demo
 
->A simple demo for socket communication between c++ and python ,tested with Ubuntu 20.04.
+>A simple demo for socket communication between c++ and python , tested with Ubuntu 20.04.
 
 ## Usage
 
